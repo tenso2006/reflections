@@ -1,0 +1,15 @@
+What happens when you initialize a repository? Why do you need to do it?
+	
+	When we initialize a repository, inside the current directory, git creates a hidden directory called .git which contains all the meta data about the git commits and history of all the versions which was saved along with other git commands.
+
+	We need to do it because without it, it will be just a normal directory which does not have the capability to capture all the version history and commands to check the difference between various versions and ability to move easily to various version. It will be very difficult to do version control without initializing the git repository.
+
+
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+	Staging area is the buffer area between the working directory and the repository, which holds the the untracked files before being committed and added to the repository as one collection of files called commit.
+	Where as working directory is the directory that holds only the regular files.
+	Repository is .git directory inside of working directory that holds metadata collection of all the commits and history.
+
+	Staging area offers users flexibility to manually select and add any number of files as a single commit, to the repository.
