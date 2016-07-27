@@ -2,7 +2,7 @@ What happens when you initialize a repository? Why do you need to do it?
 	
 	When we initialize a repository, inside the current directory, git creates a hidden directory called .git which contains all the meta data about the git commits and history of all the versions which was saved along with other git commands.
 
-	We need to do it because without it, it will be just a normal directory which does not have the capability to capture all the version history and commands to check the difference between various versions and ability to move easily to various version. It will be very difficult to do version control without initializing the git repository.
+	We need to do it because without it, it will be just a normal directory without the capability to capture all the version history and commands to check the difference between various versions and ability to move easily to various version. It will be very difficult to do version control without initializing the git repository.
 
 
 
@@ -10,6 +10,65 @@ How is the staging area different from the working directory and the repository?
 
 	Staging area is the buffer area between the working directory and the repository, which holds the the untracked files before being committed and added to the repository as one collection of files called commit.
 	Where as working directory is the directory that holds only the regular files.
-	Repository is .git directory inside of working directory that holds metadata collection of all the commits and history.
+	Repository is .git directory inside of working directory and it holds metadata collection of all the commits and history.
 
 	Staging area offers users flexibility to manually select and add any number of files as a single commit, to the repository.
+
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+	We add only those file to the Staging Area that has a logical change, and all other file remains same as previous working directory. So this will help us identify the changes made easily.
+
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+	Branches, helps us to create any new feature and experiment with it. 
+	Branches allows working on two or more different ideas at the same time.
+	Branches allows to use the working repository and build on top of that in a separate branch.
+	It allows deviation of the previous path.
+	It helps to maintain the seperate history logs with the logical flow as per the project.
+	It helps in understanding of the project much better.
+
+	Example:
+	Anytime I am moving on to a diff piece of work
+	Anytime when I want to do something different, like context switch. 
+	Create a new branch to experiment on some new ideas.
+	a unique feature branch - which can be branch to create a unique feature.
+	ie Development branch - which developer can work on without interupting the master file.
+	so that the master branch never breaks and always work
+	ie experimental branch etc
+	good to collaborate with self and public
+	example , feature branch and bug branch.. git allow context switch and go the other branch and start working on it.
+
+
+How do the diagrams help you visualize the branch structure?
+
+	Diagram helped me in visualizing the concept of branch clearly as to how it is related to one another. I can see the starting point of the branch in the master and its ending point. 
+
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+	When two branches are merged, git creates a new commit for the current branch, in which things that are common in both the file are added to the new commit, and then git compares the root commit at which both branches started, to end commit on both branches, if things found in root commit but not in branches, then those commits are not included in the merged commit, assuming that it was removed on purpose, whereas those things which are found in branches but not in root commit, they are included in the merged commit.
+
+	We represent it in the diagram, because this way it gives the complete picture of the git repository, having different branches and path of any given commits.
+
+
+Reflect: Automatic vs. Manual Merging
+Now that you’ve learned when Git will not be able to automatically merge branches, and what happens when it can’t
+
+	When git can't automatically merge branches, git will notify as to what has caused this, by
+	giving a conflict message. This message informs the file name which has the conflict and inside of the file, git highlights the part which caused the conflict with these message
+	<<<<<< HEAD, which refers to the conflict part in current branch.
+	<<<<<< Conflict before COMMON Anscestry , which is the conflict part before there were any 		conflict.
+	====== THIS, which is the conflict part in other branch.
+	So then we have to manually check which one can be kept and which we dont need. Then add the file to staging area and commit, with message.
+	
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+	Pros:
+	It saves a huge time especially when the file size is large. 
+	It reduces probability of error.
+	It increases the efficiency 
+
+	Cons:
+	Git wont be able to understand and merge based on the logical flow.
