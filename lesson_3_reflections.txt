@@ -38,3 +38,13 @@ When would you want to use a remote repository rather than keeping all your work
  	It would be easier to how to do, but very hard to track changes, updates , errors, checkout other persons file versions, especially for a large project.
  	Everyone has different version and might name main master file differently, if someone accidently changes the main file name, it result in loss of our backup master file.
  	With git, all these problems are solved using branches.
+
+
+ When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+
+ 	I would make changes seperately in branch than in master when I want to add new feature, or anything that is uncertain or has significant change. So that the master remains intact as a backup. 
+ 	Also I would make any changes to the branch so that i can compare it to remote master and see if there is any changes that needs to be incorporated into local again, because of other commit added in remote. If I had made changes directly on master, and incase if remote and master are different, then I would have no access to the earlier master file for merge to work. So because of this reason, we should update the local master at the end when all branches and remote conflict are resolved. and update the remote and then update the master from the remote.
+
+ 	By having a separate branch, makes a permission based system so that we have at least controls on what types of changes are made to the master branch and when, which safeguard the working master branch from breaking.
+
+ 	If project is simple one user and does require only few changes without deleting any, then one can make changes to master directly, otherwise it will be very difficult.
