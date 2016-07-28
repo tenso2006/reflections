@@ -9,3 +9,18 @@ When would you want to use a remote repository rather than keeping all your work
  	1. Github, has commits from other people, and sometimes we need to work on progress and goal that we have set in local git repository and not be interfered by others.
  	2. So that we can pull and update only when it is required.
  	3. Other people might have deleted some lines which I wanted in the file Or added something which i didnt want, which will lead to conflict and will pop up randomly while I am busy working on something. This will cause frequent distraction from the current work to resolve the conflict.
+
+
+ Describe the differences between forks, clones, and branches. When would you use one instead of another?
+
+ 	The difference are
+ 	
+ 	Fork : is a clone of the repository done on GitHub.
+ 	Uses: I would use this only when I like X's repository and want to create something new for myself. This will allow me to work independently without affecting original source repository of X's
+
+ 	Clone: is a copy of the repository made from remote GitHub server to my local system.
+ 	Uses: I would use this to copy repository from remote repository to my local system. 
+ 	It allows me to make changes local system.
+
+ 	Branch: is copy of master branch and it allows to make changes to the branch without affecting the master branch.
+ 	Uses: I would use this when adding new feature or experiment so that it wont affect the master branch.
