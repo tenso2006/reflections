@@ -29,4 +29,12 @@ When would you want to use a remote repository rather than keeping all your work
  What is the benefit of having a copy of the last known state of the remote stored locally?
 
  	The benefit of having a copy of the last known state of the remote stored locally are:
- 	we can use git diff and git log to check the difference and compare between the most recent uptodate copy of remote, by storing it locally and the local state. This will not be possible if we didn't had the uptodate copy of the remote state stored locally.
+ 	we can use git diff and git log to check the difference and compare between the most recent uptodate copy of remote, by storing it locally and the local state. This will not be possible if we didn't had the uptodate copy of the remote state stored locally. 
+
+
+ How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+
+ 	I would collaborate using files being saved in locally and then send the file using email, or chat messenger or passing flash drive or use dropbox.
+ 	It would be easier to how to do, but very hard to track changes, updates , errors, checkout other persons file versions, especially for a large project.
+ 	Everyone has different version and might name main master file differently, if someone accidently changes the main file name, it result in loss of our backup master file.
+ 	With git, all these problems are solved using branches.
