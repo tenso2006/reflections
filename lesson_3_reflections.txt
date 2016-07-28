@@ -13,7 +13,7 @@ When would you want to use a remote repository rather than keeping all your work
 
  Describe the differences between forks, clones, and branches. When would you use one instead of another?
 
- 	The difference are
+ 	The differences are
  	
  	Fork : is a clone of the repository done on GitHub.
  	Uses: I would use this only when I like X's repository and want to create something new for myself. This will allow me to work independently without affecting original source repository of X's
@@ -24,3 +24,9 @@ When would you want to use a remote repository rather than keeping all your work
 
  	Branch: is copy of master branch and it allows to make changes to the branch without affecting the master branch.
  	Uses: I would use this when adding new feature or experiment so that it wont affect the master branch.
+
+
+ What is the benefit of having a copy of the last known state of the remote stored locally?
+
+ 	The benefit of having a copy of the last known state of the remote stored locally are:
+ 	we can use git diff and git log to check the difference and compare between the most recent uptodate copy of remote, by storing it locally and the local state. This will not be possible if we didn't had the uptodate copy of the remote state stored locally.
